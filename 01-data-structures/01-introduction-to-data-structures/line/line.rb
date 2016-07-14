@@ -23,7 +23,13 @@ class Line
   end
 
   def middle
-    return self.members[3]
+    if self.members.length % 2 == 0
+      element = (self.members.length / 2)
+      return self.members[element]
+    elsif self.members.length % 2 != 0
+        second_element = (self.members.length + 1) / 2
+        return second_element
+    end
   end
 
   def back
