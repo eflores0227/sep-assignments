@@ -28,7 +28,7 @@ class Line
       return self.members[element]
     elsif self.members.length % 2 != 0
         second_element = (self.members.length + 1) / 2
-        return second_element
+        return self.element[second_element]
     end
   end
 
