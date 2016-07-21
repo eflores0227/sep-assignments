@@ -25,14 +25,17 @@ class MyQueue
     if @queue.empty?
       return true
     else
-      second_array = []
+      array = []
+      second_array = @queue[0]
       @queue.each_with_index do |person, index|
-        @queue[index - 1]
+        next if index == 0
+        array[index - 1] = person
       end
-      @queue = second_array
+      @queue = array
     end
     @tail = @queue[-1]
     @head = @queue[0]
+    second_array
   end
 
   def empty?
