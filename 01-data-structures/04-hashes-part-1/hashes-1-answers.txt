@@ -1,0 +1,2 @@
+doubling the initial array is slow, there are faster ways to do the same action.
+doubling the array would also cause collisions because of the open buckets to be filled in the same index as another.
